@@ -1,22 +1,24 @@
 ---
 
 - hosts: all
-  gather_facts: false
   tasks:
 
   - name: update repo
     yum:
       update_cache: yes
+    #when: ansible_distribution == "CentOS"
 
   - name: install-git
     yum:
       name: git
       state: latest
- 
+    #when: ansible_distibution == "CentOS" 
 
-  - name: install-notepad++
+  - name: install-httpd
     yum:
-      name: notepad++
+      name: httpd
+      state: latest
+    #when: ansible_distribution == "CentOS"
 
 
 

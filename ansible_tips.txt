@@ -11,3 +11,4 @@ sudo ansible all -m yum -a "name=vim state=present"
     - httpd
     - httpd-tools
 
+git diff playbook.yml
