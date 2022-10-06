@@ -1,0 +1,2 @@
+sudo ansible all --key-file ~/.ssh/id_rsa -i inventory.txt -m ping
+
