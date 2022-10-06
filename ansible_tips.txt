@@ -1,2 +1,13 @@
 sudo ansible all --key-file ~/.ssh/id_rsa -i inventory.txt -m ping
 ansible all --list-hosts
+sudo ansible all -m yum -a "name=vim state=present"
+
+
+- name: Install a list of packages with a list variable
+  ansible.builtin.yum:
+    name: "{{ packages }}"
+  vars:
+    packages:
+    - httpd
+    - httpd-tools
+

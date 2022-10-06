@@ -1,0 +1,22 @@
+---
+
+- hosts: all
+  gather_facts: false
+  tasks:
+
+  - name: update repo
+    yum:
+      update_cache: yes
+
+  - name: install-git
+    yum:
+      name: git
+      state: absent
+ 
+
+  - name: install-notepad++
+    yum:
+      name: notepad++
+
+
+
