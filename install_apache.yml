@@ -11,10 +11,10 @@
     when: ansible_distribution ==  "CentOS"
   
   - name: copy files
-    tags: copy_files;centOS
+    tags: files;centOS
     copy:
       src: default_site.html
-      dest: /opt
+      dest: /var/www/html/index.html
       owner: root
       group: root
       mode: 0644    
@@ -35,6 +35,15 @@
       state: latest
     when: ansible_distribution == "CentOS"
 
+
+  - name: start the httpd service (CentOS)
+    tags: httpd-service
+    service:
+      name: httpd
+      state: started
+      enabled: yes # tells systemctl to enable the service after reboot
+    when: ansible_distribution == "CentOS"
+
  
   - name: install unzip
     tags: unzip
@@ -51,6 +60,9 @@
       mode: 0755
       owner: root
       group: root
+
+
+
 
 
 
