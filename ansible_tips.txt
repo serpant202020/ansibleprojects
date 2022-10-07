@@ -12,3 +12,8 @@ sudo ansible all -m yum -a "name=vim state=present"
     - httpd-tools
 
 git diff playbook.yml
+
+# reverting back to a previous commit
+git logs --oneline
+git checkout 9999999 {{ file name }} 
+

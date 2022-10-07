@@ -2,17 +2,23 @@
 
 - hosts: all
   tasks:
-  
 
-  - name: install packages
-    package: #use either apt or yum
-      name: 
-      - "{{ git }}"
-      - "{{ httpd }}"
-      state: latest
+  - name: update repo
+    yum:
       update_cache: yes
-    when: ansible_distribution == "CentOS"
+    #when: ansible_distribution == "CentOS"
 
+  - name: install-git
+    yum:
+      name: git
+      state: latest
+    #when: ansible_distibution == "CentOS" 
+
+  - name: install-httpd
+    yum:
+      name: httpd
+      state: latest
+    #when: ansible_distribution == "CentOS"
 
 
 
