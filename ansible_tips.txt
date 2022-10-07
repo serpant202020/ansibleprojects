@@ -16,4 +16,5 @@ git diff playbook.yml
 # reverting back to a previous commit
 git logs --oneline
 git checkout 9999999 {{ file name }} 
-
+ansible-playbook --list-tags install_apache.yml
+ansible-playbook --tags git install_apace.yaml
