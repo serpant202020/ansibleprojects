@@ -9,7 +9,18 @@
       update_cache: yes
       update_only: yes
     when: ansible_distribution ==  "CentOS"
+  
+  - name: copy files
+    tags: copy_files;centOS
+    copy:
+      src: default_site.html
+      dest: /opt
+      owner: root
+      group: root
+      mode: 0644    
 
+
+  
   - name: install-git
     tags: git
     yum:
@@ -24,5 +35,5 @@
       state: latest
     when: ansible_distribution == "CentOS"
 
-
+ 
 
