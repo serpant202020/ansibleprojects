@@ -6,10 +6,14 @@ ansible-target2 ansible_host=192.168.0.157 ansible_connection=ssh
 
 #ansible_ssh_pass=openbox.org ansible_user=root
 
+#ansible-target3 ansible_host=192.168.0.228 ansible_connecition=ssh ansible_user=serpant2012 
 
 [web]
 ansible-target1
 
 [db]
 ansible-target2
+
+[windows]
+ansible-target3
 
