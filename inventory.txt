@@ -14,7 +14,7 @@ ansible-target1
 [db]
 ansible-target2
 
-[windows]
-ansible-target3
+#[windows]
+#ansible-target3
 
 
