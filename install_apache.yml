@@ -36,4 +36,22 @@
     when: ansible_distribution == "CentOS"
 
  
+  - name: install unzip
+    tags: unzip
+    package:
+      name: unzip
+
+
+  - name: install terrform
+    tags: terraform
+    unarchive:
+      src:  https://releases.hashicorp.com/terraform/1.3.2/terraform_1.3.2_linux_386.zip
+      dest: /usr/local/bin
+      remote_src: yes #don't look in the files directory. 
+      mode: 0755
+      owner: root
+      group: root
+
+
+
 
