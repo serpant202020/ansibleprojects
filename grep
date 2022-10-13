@@ -1,0 +1,4 @@
+grep port /etc/ssh/sshd_config
+
+grep -r install * - search files for a keywork
+grep -r install * - search files for a keyword
