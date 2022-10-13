@@ -1,12 +1,10 @@
-ansible-target1 ansible_host=192.168.0.156 ansible_connection=ssh git=git httpd=httpd
+ansible-target1 ansible_host=192.168.0.156 ansible_connection=ssh
 
-#ansible_ssh_pass=openbox.org ansible_user=root
 
-ansible-target2 ansible_host=192.168.0.157 ansible_connection=ssh git=git httpd=httpd
+ansible-target2 ansible_host=192.168.0.157 ansible_connection=ssh 
 
-#ansible_ssh_pass=openbox.org ansible_user=root
 
-#ansible-target3 ansible_host=192.168.0.228 ansible_connecition=ssh ansible_user=serpant2012 
+ansible-target3 ansible_host=192.168.0.168 ansible_connecition=ssh ansible_user=serpant2012
 
 [web]
 ansible-target1

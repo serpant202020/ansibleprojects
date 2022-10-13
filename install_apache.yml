@@ -5,10 +5,9 @@
 
   - name: update repo
     tags: always
-    yum:
+    packages:
       update_cache: yes
       update_only: yes
-    when: ansible_distribution ==  "CentOS"
   
   - name: copy files
     tags: files;centOS
@@ -61,7 +60,11 @@
       owner: root
       group: root
 
-
+- name: instal ubuntu-packages (Ubunut)
+  tags: ubuntu
+  packages:
+    - net-tools
+  when: ansible_distribution == "Ubuntu"   
 
 
 

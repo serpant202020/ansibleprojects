@@ -1,0 +1,11 @@
+tar -cf etc-backup.tar etc 
+tar -tvf etc-backup.tar (look into a tar file)
+tar -tvf etc-backup.tar | wc -l (count the lines)
+
+ 
+tar -xf etc-backup.tar- extract a tar file
+tar -xvf etc-backup.tar- extract a tar file with verbose
+gzip etc_backup.tar - zip a file
+gunzip etc_backup.tar.gz - unzip a file
+tar -czf etc-backup.tar.gz etc - create a tar and zip it
+ls -lh - list the size of a file
